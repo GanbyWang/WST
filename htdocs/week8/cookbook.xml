@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="cookbook.xsl"?>
+<cookbook xmlns=""
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation = "http://162.105.146.180:8079/week8/cookbook.xsd">
+<recipe>
+<name>Brownies</name>
+
+<material>
+<ingredient>
+<name>butter</name>
+<amount>1/2 cup</amount>
+</ingredient>
+
+<ingredient>
+<name>white sugar</name>
+<amount>1 cup</amount>
+</ingredient>
+
+<ingredient>
+<name>egg</name>
+<amount>2</amount>
+</ingredient>
+
+<ingredient>
+<name>vanilla</name>
+<amount>1 teaspoon</amount>
+</ingredient>
+
+<ingredient>
+<name>unsweetened cocoa powder</name>
+<amount>1/3 cup</amount>
+</ingredient>
+
+<ingredient>
+<name>all-purpose flour</name>
+<amount>1/2 cup</amount>
+</ingredient>
+
+<ingredient>
+<name>salt</name>
+<amount>1/4 teaspoon</amount>
+</ingredient>
+
+<ingredient>
+<name>baking powder</name>
+<amount>1/4 teaspoon</amount>
+</ingredient>
+</material>
+
+<direction>
+<step>
+Preheat oven to 350 degrees F (175 degrees C). Grease and flour an 8-inch square pan.
+</step>
+</direction>
+
+<direction>
+<step>
+In a large saucepan, melt 1/2 cup butter. Remove from heat, and stir in sugar, eggs, and 1 teaspoon vanilla. Beat in 1/3 cup cocoa, 1/2 cup flour, salt, and baking powder. Spread batter into prepared pan.
+</step>
+</direction>
+
+<direction>
+<step>
+Bake in preheated oven for 25 to 30 minutes. Do not overcook.
+</step>
+</direction>
+
+<direction>
+<step>
+To Make Frosting: Combine 3 tablespoons softened butter, 3 tablespoons cocoa, honey, 1 teaspoon vanilla extract, and 1 cup confectioners' sugar. Stir until smooth. Frost brownies while they are still warm.
+</step>
+</direction>
+</recipe>
+
+<recipe>
+<name>Peanut Butter Cookies</name>
+
+<material>
+<ingredient>
+<name>unsalted butter</name>
+<amount>1 cup</amount>
+</ingredient>
+
+<ingredient>
+<name>crunchy peanut butter</name>
+<amount>1 cup</amount>
+</ingredient>
+
+<ingredient>
+<name>white sugar</name>
+<amount>1 cup</amount>
+</ingredient>
+
+<ingredient>
+<name>packed brown sugar</name>
+<amount>1 cup</amount>
+</ingredient>
+
+<ingredient>
+<name>egg</name>
+<amount>2</amount>
+</ingredient>
+
+<ingredient>
+<name>all-purpose flour</name>
+<amount>2 1/2 cups</amount>
+</ingredient>
+
+<ingredient>
+<name>baking powder</name>
+<amount>1 teaspoon</amount>
+</ingredient>
+
+<ingredient>
+<name>salt</name>
+<amount>1/2 teaspoon</amount>
+</ingredient>
+
+<ingredient>
+<name>baking soda</name>
+<amount>1 1/2 teaspoons</amount>
+</ingredient>
+</material>
+
+<direction>
+<step>
+Cream butter, peanut butter, and sugars together in a bowl; beat in eggs.
+</step>
+</direction>
+
+<direction>
+<step>
+In a separate bowl, sift flour, baking powder, baking soda, and salt; stir into butter mixture. Put dough in refrigerator for 1 hour.
+</step>
+</direction>
+
+<direction>
+<step>
+Roll dough into 1 inch balls and put on baking sheets. Flatten each ball with a fork, making a crisscross pattern. Bake in a preheated 375 degrees F oven for about 10 minutes or until cookies begin to brown.
+</step>
+</direction>
+</recipe>
+</cookbook>

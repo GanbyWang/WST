@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>week4</title>
+
+<style>
+body{
+	font-family:Verdana, Geneva, sans-serif;
+	margin:0px 0px 0px 0px;
+	background-color:whitesmoke;
+}
+
+a{
+	text-decoration:none;
+}
+
+a.one:link {color:white;}
+a.one:visited {color:white;}
+a.one:hover {color:coral;}
+
+a.two:link {color:lightslategray;}
+a.two:visited {color:lightslategray;}
+a.two:hover {color:coral;}
+
+a.three:link {color:black;}
+a.three:visited {color:black;}
+a.three:hover {color:coral;}
+
+#nav{
+	width:100%;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+}
+
+#nav table{
+	width:100%;
+	text-align:center;
+	background-color:black;
+	color:white;
+	height:50px;
+	border-style:none;
+}
+
+#header{
+	text-align:center;
+	padding:30px;
+	color:lightslategray;
+}
+
+#hw_nav {
+	width:80%;
+	padding:20px 10% 20px 10%;
+	line-height:200%;
+}
+
+#hw_nav p{
+	font-size:20px;
+	line-height:150%;
+	text-align:center;
+}
+
+#hw_nav table{
+	width:100%;
+	text-align:center;
+	background-color:black;
+	color:white;
+	height:50px;
+	border-style:none;
+}
+
+.hw {
+	width:80%;
+	padding:30px 10% 30px 10%;
+	line-height:200%;
+}
+
+.req {
+	font-size:16px;
+	line-height:150%;
+	font-family:'Comic Sans MS', cursive;
+	background-color:silver;
+	padding:20px;
+}
+
+.ans {
+	font-size:16px;
+	line-height:150%;
+	font-family:'Comic Sans MS', cursive;
+	background-color:white;
+	padding:20px;
+}
+
+#vali {
+	font-size:16px;
+	line-height:150%;
+	font-family:'Comic Sans MS', cursive;
+	background-color:silver;
+	padding:20px;
+}
+
+#footer{
+	clear:both;
+	text-align:left;
+	width:100%;
+	background-color:black;
+	color:white;
+	padding:10px 20px 10px 20px;
+}
+</style>
+</head>
+
+<body>
+<div id="nav">
+<table>
+<tr>
+<td width="33%">
+<strong><a href="../index.html" class="one">Homepage</a></strong>
+</td>
+
+<td width="33%" style="background:white; color:black;">
+<strong>Homework List</strong>
+</td>
+
+<td width="33%">
+<strong><a href="index.html#info" class="one">Contact Me</a></strong>
+</td>
+</tr>
+</table>
+</div>
+
+<div id="header">
+<h1>Week 4 homework</h1>
+</div>
+<hr />
+
+<div id="hw_nav">
+<p>
+The homework consists of 5 parts:
+</p>
+<table>
+<tr>
+<td width="20%">
+<strong><a href="#hw1" class="one">HW1</a></strong>
+</td>
+
+<td width="20%" style="background:white; color:black;">
+<strong><a href="#hw2" class="three">HW2</a></strong>
+</td>
+
+<td width="20%">
+<strong><a href="#hw3" class="one">HW3</a></strong>
+
+<td width="20%" style="background:white; color:black;">
+<strong><a href="#hw4" class="three">HW4</a></strong>
+</td>
+
+<td width="20%">
+<strong><a href="#hw5" class="one">HW5</a></strong>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="hw">
+<a name="hw1"></a>
+<strong>HW1:</strong>
+<p class="req">
+Answer the three questions asked in the course:<br />
+&nbsp;&nbsp;1. Give the SELECT command to answer the question Who will go to the party held in Peking University?<br />
+&nbsp;&nbsp;2. Figure out a way to obtain the column labels returned by mysql_fetch_array.<br />
+&nbsp;&nbsp;3. Tell the difference between a CGI program and a PHP program executed by a Web Server.
+</p>
+
+<strong>Answer:</strong>
+<p class="ans">
+1.<br />
+<code>
+SELECT party.Party_Num, party.Time, party.Place, guest.Guest_ID, guest.Name<br />
+&nbsp;&nbsp;FROM guest, party, guest_party<br />
+&nbsp;&nbsp;WHERE party.Place=’Peking University’<br />
+&nbsp;&nbsp;AND guest_party.Guest_ID=guest.Guest_ID<br />
+&nbsp;&nbsp;AND party.Party_Num=guest_party.Party_Num<br />
+</code><br />
+2.<br />
+<code>
+while($pair = each($row))<br />
+{<br />
+&nbsp;&nbsp;$key=$row[“key”];<br />
+&nbsp;&nbsp;if(!is_int($key))<br />
+&nbsp;&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;print htmlspecialchars($key);<br />
+&nbsp;&nbsp;}<br />
+}<br />
+</code><br />
+3. Differences between a CGI program and a PHP  program:<br />
+1. CGI is a standard for the communication between the Web server and the external program. So any program that meets with the requirements of CGI can be called as a CGI program, no matter which programming language it uses. In that case, PHP can also be used to create CGI programs, and a PHP program is a specific kind of CGI programs.<br /><br />
+2. Since PHP is an embedded language, a PHP program can generate HTML tags more quickly, which is more efficient than a CGI program.<br /><br />
+3. PHP process will load the frequently-visited PHP program in the memory. So when the program is accessed again, it can be executed at once without compiling, which accelerates the user’s visiting.<br /><br />
+4. PHP supports a wide range of functions while the CGI program is limited by the language it uses.<br />
+</p>
+</div>
+
+<hr />
+
+<div class="hw">
+<a name="hw2"></a>
+<strong>HW2:</strong>
+<p class="req">
+Set up PHP for your Apache and test it. 
+</p>
+<strong>Answer:</strong>
+<p class="ans">
+I've set up the PHP successfully.
+</p>
+</div>
+
+<hr />
+
+<div class="hw">
+<a name="hw3"></a>
+<strong>HW3:</strong>
+<p class="req">
+Transform the guest book that you implemented in week 3 into a Database version. 
+</p>
+<strong>Answer:</strong>
+<p class="ans">
+<a href="week4_form.html" class="two">
+Click the link to see my form.
+</a><br />
+The form works exactly as the one in week 3 but in PHP technology.
+</p>
+</div>
+
+<hr />
+
+<div class="hw">
+<a name="hw4"></a>
+<strong>HW4:</strong>
+<p class="req">
+For homework3, only one Table is created. This time, create the other two tables, party table and party_guest table (you can choose different table names). Functions realized include:<br />
+&nbsp;&nbsp;1. Guest can find out what parties will be given and when and where.<br />
+&nbsp;&nbsp;2. In additon to Guest name, Age, Gender, .... User can choose what parties he or she wants to go.<br />
+&nbsp;&nbsp;3. Separate PHP programs are provided for the organizer to input information about the parties will be given.
+</p>
+<strong>Answer:</strong>
+<p class="ans">
+I've met all the requirements.<br />
+<a href="week4_form_op.html" class="two">
+Click the link to see my form.
+</a>
+</p>
+</div>
+
+<hr />
+
+<div class="hw">
+<a name="hw5"></a>
+<strong>HW5:</strong>
+<p class="req">
+Realize more query functions.
+</p>
+<strong>Answer:</strong>
+<p class="ans" style="margin:0px; pa">
+I've accomplished the following functions:
+</p>
+
+<form action="week4_query1.php">
+<p class="ans" style="margin:0px;">
+Who will go to the particular party?<br />
+Fill in the ID of the party you want to query:<br /><br />
+<input type="text" name="party_id" style="font-size:24px;" /><br /><br />
+<input type="submit" value="Submit" style="font-size:24px;" />
+</p>
+</form>
+
+<form action="week4_query2.php">
+<p class="ans" style="margin:0px;">
+Which party will someone hold?<br />
+Fill in the name of the host you want to query:<br /><br />
+<input type="text" name="host_name" style="font-size:24px;" /><br /><br />
+<input type="submit" value="Submit" style="font-size:24px;" />
+</p>
+</form>
+</div>
+
+<hr />
+<div id="footer">
+<p>Copyright@Alex_Wang | Web Software Technology</p>
+</div>
+</body>
+</html>

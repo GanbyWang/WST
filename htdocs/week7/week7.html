@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>week7</title>
+
+<style>
+body{
+	font-family:Verdana, Geneva, sans-serif;
+	margin:0px 0px 0px 0px;
+	background-color:whitesmoke;
+}
+
+a{
+	text-decoration:none;
+}
+
+a.one:link {color:white;}
+a.one:visited {color:white;}
+a.one:hover {color:coral;}
+
+a.two:link {color:lightslategray;}
+a.two:visited {color:lightslategray;}
+a.two:hover {color:coral;}
+
+a.three:link {color:black;}
+a.three:visited {color:black;}
+a.three:hover {color:coral;}
+
+#nav{
+	width:100%;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+}
+
+#nav table{
+	width:100%;
+	text-align:center;
+	background-color:black;
+	color:white;
+	height:50px;
+	border-style:none;
+}
+
+#header{
+	text-align:center;
+	padding:30px;
+	color:lightslategray;
+}
+
+#hw_nav {
+	width:80%;
+	padding:20px 10% 20px 10%;
+	line-height:200%;
+}
+
+#hw_nav p{
+	font-size:20px;
+	line-height:150%;
+	text-align:center;
+}
+
+#hw_nav table{
+	width:100%;
+	text-align:center;
+	background-color:black;
+	color:white;
+	height:50px;
+	border-style:none;
+}
+
+.hw {
+	width:80%;
+	padding:30px 10% 30px 10%;
+	line-height:200%;
+}
+
+.req {
+	font-size:16px;
+	line-height:150%;
+	font-family:'Comic Sans MS', cursive;
+	background-color:silver;
+	padding:20px;
+}
+
+.ans {
+	font-size:16px;
+	line-height:150%;
+	font-family:'Comic Sans MS', cursive;
+	background-color:white;
+	padding:20px;
+}
+
+img {
+	width:80%;
+	margin:20px 10% 20px 10%;
+}
+
+#footer{
+	clear:both;
+	text-align:left;
+	width:100%;
+	background-color:black;
+	color:white;
+	padding:10px 20px 10px 20px;
+}
+</style>
+</head>
+
+<body>
+<div id="nav">
+<table>
+<tr>
+<td width="33%">
+<strong><a href="../index.html" class="one">Homepage</a></strong>
+</td>
+
+<td width="33%" style="background:white; color:black;">
+<strong>Homework List</strong>
+</td>
+
+<td width="33%">
+<strong><a href="../index.html#info" class="one">Contact Me</a></strong>
+</td>
+</tr>
+</table>
+</div>
+
+<div id="header">
+<h1>Week 7 homework</h1>
+</div>
+<hr />
+
+<div id="hw_nav">
+<p>
+The homework consists of 5 parts:
+</p>
+<table>
+<tr>
+<td width="20%" style="background:white; color:black;">
+<strong><a href="#hw1" class="three">HW1</a></strong>
+</td>
+
+<td width="20%">
+<strong><a href="#hw2" class="one">HW2</a></strong>
+</td>
+
+<td width="20%" style="background:white; color:black;">
+<strong><a href="#hw3" class="three">HW3</a></strong>
+</td>
+
+<td width="20%">
+<strong><a href="#hw4" class="one">HW4</a></strong>
+</td>
+
+<td width="20%" style="background:white; color:black;">
+<strong><a href="#hw5" class="three">HW5</a></strong>
+</td>
+</tr>
+</table>
+</div>
+
+<hr />
+
+<div class="hw">
+<a name="hw1"></a>
+<strong>HW1:</strong>
+<p class="req">
+1. Research by loading these files on as many different browser types and versions as you can find (e.g. IE, Opera, Safari and Mozilla family). Snapshot what happens and include these images on your web site.
+</p>
+
+<strong>Answer:</strong>
+<p class="ans">
+&nbsp;&nbsp;Here is the example I found from 
+<a href="http://docs.oracle.com/javase/tutorial/2d/basic2d/index.html" class="two">
+Java Tutorial</a>.<br /><br />
+<applet code="WeatherWizard.class" width="400" height="150">
+<param name="permissions" value="sandbox">
+</applet>
+<br /><br />
+
+<a href="WeatherWizard.java" class="two" target="_blank">See the source code.</a>
+<br />
+The following snapshots show how different browser displays:<br /><br />
+
+Chrome in Windows 10:<br />
+<img src="img/win_chrome.jpg" />
+
+Safari in Windows 10:<br />
+<img src="img/win_safari.jpg" />
+
+Chrome in MacOS:<br />
+<img src="img/mac_chrome.png" />
+
+Safari in MacOS:<br />
+<img src="img/mac_safari.png" />
+
+&nbsp;&nbsp;We can see that only Safari in MacOS displays properly. I've learned that Chrome doesn't support Java Applets anymore so it's natural to see nothing with Chrome. As for the wrong display of Safari under Windows 10, I have no idea why. Maybe somethine goes wrong with Java environment.
+</p>
+
+<p style="text-align:right; font-size:18px;"><a href="#" class="two">Go back to top</a></p>
+</div>
+
+<hr />
+
+<div class="hw">
+<a name="hw2"></a>
+<strong>HW2:</strong>
+<p class="req">
+2. Experiment with applet graphics (AWT and Swing). Create a simple applet to draw a red square and a green circle (hint: Use drawRect/fillRect and drawOval/fillOval methods - Sebesta has examples).
+</p>
+
+<strong>Answer:</strong>
+<p class="ans">
+I write the applet with AWT. If everything works fine, you shall see a red square and a green circle below.<br /><br />
+<applet code="HW2.class" width="180" height="200" style="border: 1px solid gray"></applet>
+<br /><br />
+
+<a href="HW2.java" class="two" target="_blank">See the source code.</a>
+</p>
+
+<p style="text-align:right; font-size:18px;"><a href="#" class="two">Go back to top</a></p>
+</div>
+
+<hr />
+
+<div class="hw">
+<a name="hw3"></a>
+<strong>HW3:</strong>
+<p class="req">
+3. Add to your applet to draw a third shape, determined by parameters passed from the HTML file that determine the shape and colour to draw.
+</p>
+
+<strong>Answer:</strong>
+<form action="week7_hw3.php" method="get">
+<p class="ans">
+<strong>Which color do you want?</strong><br /><br />
+<select name="color">
+<option value="blue" selected>Blue</option>
+<option value="gray">Gray</option>
+<option value="yellow">Yellow</option>
+<option value="white">White</option>
+</select>
+<br /><br />
+
+<strong>Which shape do you want?</strong><br /><br />
+<select name="shape">
+<option value="square" selected>Square</option>
+<option value="circle">Circle</option>
+<option value="triangle">Triangle</option>
+</select>
+<br /><br />
+
+<input value="SUBMIT" type="submit" />
+</p>
+</form>
+
+<p style="text-align:right; font-size:18px;"><a href="#" class="two">Go back to top</a></p>
+</div>
+
+<hr />
+
+<div class="hw">
+<a name="hw4"></a>
+<strong>HW4:</strong>
+<p class="req">
+4. Write a brief (&lt;200 words) essay outlining the differences between AWT and Swing graphics. You may find it useful to visit the Sun Java website.
+</p>
+
+<strong>Answer:</strong>
+<p class="ans">
+&nbsp;&nbsp;<strong>AWT</strong> is a Java interface to native system GUI code. AWT, however, is not written in Java, but in C/C++ instead, for it just implements calling functions. As Java is a cross-platform language, in order to avoid inconsistent displays, AWT can only support rather limited functions.<br /><br />
+
+&nbsp;&nbsp;<strong>Swing</strong> is created on the basis of AWT, which means it can support all the AWT functions and realize more graphic functions. Different from AWT, Swing is written in Java, because of which Swing runs slower than AWT.<br /><br />
+
+&nbsp;&nbsp;In conclusion, AWT uses system GUI functions to offer relatively limited graphic functions. It's used in early stage of Java developing. Swing is introduced in order to overcome the shortcomings of AWT. But it works slower than AWT because of its large scale. 
+</p>
+
+<p style="text-align:right; font-size:18px;"><a href="#" class="two">Go back to top</a></p>
+</div>
+
+<hr />
+
+<div class="hw">
+<a name="hw5"></a>
+<strong>HW5:</strong>
+<p class="req">
+5. For additional credit: use threads to implement some sort of animation ... try moving the shapes around. Maybe you could implement a pingpong game.
+</p>
+
+<strong>Answer:</strong>
+<p class="ans">
+I implement an applet in which you can move the shape around. If everything works fine, you shall try it below.<br /><br />
+
+<applet code="HW5.class" width="300" height="200"></applet>
+<br /><br />
+
+<a href="HW5.java" class="two" target="_blank">See the source code.</a>
+</p>
+
+<p style="text-align:right; font-size:18px;"><a href="#" class="two">Go back to top</a></p>
+</div>
+
+<hr />
+<div id="footer">
+<p>Copyright@Alex_Wang | Web Software Technology</p>
+</div>
+</body>
+</html>

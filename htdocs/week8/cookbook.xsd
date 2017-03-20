@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema 
+xmlns:xs =  "http://www.w3.org/2001/XMLSchema" 
+targetNamespace = "" 
+xmlns = "http://162.105.146.180:8079/week8/xmlNamespace" 
+elementFormDefault = "qualified">
+
+<xs:element name="cookbook">
+<xs:complexType>
+<xs:sequence>
+
+<xs:element name="recipe" maxOccurs="unbounded">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1" />
+
+<xs:element name="material" minOccurs="1" maxOccurs="1">
+<xs:complexType>
+<xs:sequence>
+
+<xs:element name="ingredient" minOccurs="1" maxOccurs="unbounded">
+<xs:complexType>
+<xs:sequence>
+
+<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1" />
+<xs:element name="amount" type="xs:string" minOccurs="1" maxOccurs="1" />
+
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+
+<xs:element name="direction" minOccurs="1" maxOccurs="unbounded">
+<xs:complexType>
+<xs:sequence>
+
+<xs:element name="step" type="xs:string" minOccurs="1" maxOccurs="1" />
+
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+
+</xs:schema>

@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>week9_submit</title>
+
+<script type="text/javascript" src="http://162.105.146.180:8081/js/jquery.min.js"></script>
+
+<script type="text/javascript">
+function query(){
+	var check=window.document.getElementById("name").value;
+	if(check=="")
+	{
+		window.alert("You haven't filled in your name!");
+		return false;
+	}
+	check=window.document.getElementById("age").value;
+	if(check=="")
+	{
+		window.alert("You haven't filled in your age!");
+		return false;
+	}
+	check=window.document.getElementById("email").value;
+	if(check=="")
+	{
+		window.alert("You haven't filled in your email!");
+		return false;
+	}
+	window.alert("Now you have filled in all the information required, you can turn in your questionaire by clicking the Submit button");
+	return true;
+}
+</script>
+
+<style>
+body{
+	font-family:Verdana, Geneva, sans-serif;
+	margin:0px 0px 0px 0px;
+	background-color:whitesmoke;
+}
+
+a{
+	text-decoration:none;
+}
+
+a.one:link {color:white;}
+a.one:visited {color:white;}
+a.one:hover {color:coral;}
+
+a.two:link {color:lightslategray;}
+a.two:visited {color:lightslategray;}
+a.two:hover {color:coral;}
+
+.button{
+	margin:20px;
+	padding:10px;
+	width:200px;
+	font-family:"Comic Sans MS", cursive;
+	font-size:18px;
+}
+
+#nav{
+	width:100%;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+}
+
+#nav table{
+	width:100%;
+	text-align:center;
+	background-color:black;
+	color:white;
+	height:50px;
+	border-style:none;
+}
+
+#header{
+	text-align:center;
+	padding:30px;
+	color:lightslategray;
+}
+
+#ques{
+	width:80%;
+	margin-left:10%;
+	background-color:silver;
+	font-family:"Comic Sans MS", cursive;
+	font-size:24px;
+}
+
+#ques p{
+	padding:30px 20px 30px 20px;
+	margin:0px;
+}
+
+#ques input{
+	font-size:24px;
+}
+
+#footer{
+	clear:both;
+	text-align:left;
+	width:100%;
+	background-color:black;
+	color:white;
+	padding:10px 20px 10px 20px;
+}
+</style>
+</head>
+
+<body>
+<div id="nav">
+<table>
+<tr>
+<td width="33%">
+<strong><a href="http://162.105.146.180:8079/index.html" class="one">Homepage</a></strong>
+</td>
+
+<td width="33%" style="background:white; color:black;">
+<strong>Homework List</strong>
+</td>
+
+<td width="33%">
+<strong><a href="http://162.105.146.180:8079/index.html#info" class="one">Contact Me</a></strong>
+</td>
+</tr>
+</table>
+</div>
+
+<div id="header">
+<h1>Week 9 Questionaire</h1>
+</div>
+<hr />
+
+<div id="ques">
+<p>
+<strong>Name:</strong><br /><br />
+<input class="input" type="text" name="name" id="name" required="required" />
+</p>
+
+<p style="background-color:black; color:white;">
+<strong>Age:</strong><br /><br />
+<input class="input" type="text" name="age" id="age" required="required" />
+</p>
+
+<p>
+<strong>Gender:</strong><br /><br />
+<input class="input" type = "radio"  name = "gender"  value = "female" checked="checked" /> Female <br />
+<input class="input" type = "radio"  name = "gender"  value = "male" /> Male
+</p>
+
+<p style="background-color:black; color:white;">
+<strong>E_mail Address:</strong><br /><br />
+<input class="input" type="email" name="email" id="email" required="required" />
+</p>
+
+<p>
+Make sure that you have filled in every item the questionaire needs. 
+Click <span style="color:coral;" onclick="query()">here</span> to check!
+</p>
+<button id="submit" onclick='' class="button">Submit</button>
+
+<p style="text-align:right;">
+<a href="http://162.105.146.180:8079/week9.html" class="two">Back to week 9 page.</a>
+</p>
+</div>
+
+<hr />
+<div id="footer">
+<p>Copyright@Alex_Wang | Web Software Technology</p>
+</div>
+
+<script>
+$(document).ready(function(){
+	$("#submit").click(function(){
+		// alert("Submit successfully!");
+		$.post(
+		"./turnin",
+		{
+			Guest_Name: $("#name").val(),
+			Age: $("#age").val(),
+			Gender: $("input[name='gender']:checked").val(),
+			E_mail: $("#email").val()
+		},
+		function(data){
+			alert("Submit successfully!");
+		}
+		);
+		$("input").val("");
+		$("input:radio:checked").attr("checked",false);
+	});
+});
+</script>
+</body>
+</html>

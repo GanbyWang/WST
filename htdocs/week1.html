@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>week1</title>
+
+<style>
+body{
+	font-family:Verdana, Geneva, sans-serif;
+	margin:0px 0px 0px 0px;
+}
+
+a{
+	text-decoration:none;
+}
+
+a.one:link {color:white;}
+a.one:visited {color:white;}
+a.one:hover {color:coral;}
+
+a.two:link {color:black;}
+a.two:visited {color:black;}
+a.two:hover {color:coral;}
+
+#nav{
+	width:100%;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+}
+
+#nav table{
+	width:100%;
+	text-align:center;
+	background-color:black;
+	color:white;
+	height:50px;
+	border-style:none;
+}
+
+#header{
+	text-align:center;
+	padding:30px;
+	color:lightslategray;
+}
+
+#intro {
+	width:80%;
+	margin-left:10%;
+}
+
+#rspan {
+	background:black;
+	padding:10px;
+	margin:0px;
+	color:white;
+	line-height:200%;
+}
+
+#q_nav{
+	margin:0px;
+	width:100%;
+	text-align:center;
+	border:0px;
+	height:40px;
+	font-family:"Comic Sans MS", cursive;
+	font-size:18px;
+}
+
+#Q1{
+	width:80%;
+	padding:30px 10% 30px 10%;
+	line-height:200%;
+}
+
+#Q1 p {
+	width:90%;
+	padding:40px;
+	background:silver;
+	line-height:150%;
+}
+
+#Q2{
+	width:80%;
+	padding:30px 10% 30px 10%;
+	line-height:200%;
+}
+
+#Q2 table {
+	border-collapse:collapse;
+}
+
+#Q2 th {
+	padding:10px;
+}
+
+#Q2 td {
+	font-family:"Comic Sans MS", cursive;
+	font-size:18px;
+}
+
+#Q2 p {
+	padding:5px 20px 5px 20px;
+	background:silver;
+}
+
+#Q3{
+	width:80%;
+	padding:30px 10% 30px 10%;
+	line-height:200%;
+}
+
+#Q3 img {
+	width:80%;
+	margin-left:10%;
+}
+
+#footer {
+	clear:both;
+	text-align:left;
+	width:100%;
+	background-color:black;
+	color:white;
+	padding:10px 20px 10px 20px;
+}
+</style>
+</head>
+
+<body bgcolor="whitesmoke">
+<div id="nav">
+<table>
+<tr>
+<td width="33%">
+<strong><a href="index.html" class="one">Homepage</a></strong>
+</td>
+
+<td width="33%" style="background:white; color:black;">
+<strong>Homework List</strong>
+</td>
+
+<td width="33%">
+<strong><a href="index.html#info" class="one">Contact Me</a></strong>
+</td>
+</tr>
+</table>
+</div>
+
+<div id="header">
+<h1>Week 1 homework</h1>
+</div>
+<hr />
+
+<div>
+<!--this div is used to navigate the questions-->
+<div id="intro">
+<table id="q_nav">
+<tr>
+<td rowspan="3" width="60%" style="line-height:200%; font-size:20px;" id="rspan">This page presents my answers to the questions in week 1 homework. The homework consists of 3 questions:</td>
+<td height="60" bgcolor="silver"><a href="#Q1" class="two">Question 1</a></td>
+</tr>
+
+<tr>
+<td height="60" bgcolor="white"><a href="#Q2" class="two">Question 2</a></td>
+</tr>
+
+<tr>
+<td height="60" bgcolor="silver"><a href="#Q3" class="two">Question 3</a></td>
+</tr>
+</table>
+</div>
+
+<div id="Q1">
+<!--this div is about Q1-->
+<a name="Q1"></a>
+<strong>
+Q1: Which category so-called "Netscape plug-in" technology belongs to? Please describe the basic idea of the technology, and give your reasoning on its position in the technology categories.
+</strong>
+<br /><br />
+
+<p>
+<strong>
+Answer: I think “Netscape plug-in” belongs to distributed object technologies.
+</strong>
+<br />
+<em>
+Basic idea of “Netscape plug-in”:
+</em>
+<br />
+&nbsp;&nbsp;The name, “Netscape plug-in”, obviously indicates that the technology focuses on developing plug-ins, and in this case, for both browser side and server side. The APIs it defines are known as NPAPI (Netscape Plug-in Application Programming Interface) and NSAPI (Netscape Server Application Programming Interface), and the former is for browsers while the latter is for servers.
+<br />
+&nbsp;&nbsp;In NPAPI architecture, a plugin declares content types it can handle. When the browser encounters a content type it cannot handle natively, it loads the appropriate plugin, sets aside space within the browser context for the plugin to render and then streams data to it. The plugin is responsible for rendering the data. The plugin runs in-place within the page, as opposed to older browsers that had to launch an external application to handle unknown content types.
+<br />
+&nbsp;&nbsp;Each plug-in that use NSAPI implements one or more Server Application Functions (SAFs). To use a SAF, an administrator must first configure the server to load the plug-in that implements that SAF. This is typically controlled by a configuration file named magnus.conf. Once the plug-in is loaded, the administrator can configure when the server should invoke the SAF and what parameters it should be passed. This is typically controlled by a configuration file named obj.conf.
+<br /><br />
+
+<em>
+Reasons:
+</em>
+<br />
+&nbsp;&nbsp;The most noteworthy characteristic of distributed objects technology is that the objects involved in the system are distributed across different address spaces but work together. The “Netscape Plug-in” technology enables the system to distribute mixed objects over servers and browsers, which coincides with the definition of distributed objects technology. What’s more, CORBA and ActiveX/DCOM are typical distributed objects technology as we know, while I’ve learned that ActiveX is identical to NPAPI, so I suppose “Netscape Plug-in” technology is also a distributed objects technology.
+</p>
+</div>
+
+<hr />
+
+<div id="Q2">
+<!--this div is about Q2-->
+<a name="Q2"></a>
+<strong>
+Q2: Think about the statusless character of World Wide Web. Give some good points and bad points of it. Can a web server know exactly how many browsers are reading its document?
+</strong>
+<br /><br />
+
+<strong>
+Answer:
+</strong>
+<br />
+
+<table border="3px" bordercolor="silver">
+<caption>
+<td colspan="2" style="padding:20px; text-align:center; font-size:24px; color:lightslategray;">
+Characteristics of the Statusless WWW
+</caption>
+
+<tr>
+<th width="50%" bgcolor="silver">Good points of the “statusless” character</th>
+<th width="50%" bgcolor="white">Bad points of the “statusless” character</th>
+</tr>
+
+<tr>
+<td bgcolor="white">
+<ol>
+<li>
+A client won’t occupy the web resource for a long time, which improves the utilization of servers’ resources and accelerates the communication.
+</li>
+<br />
+<li>
+A server won’t waste the time making sure the document is received completely and can start responding the next request at once, which shortens the client’s waiting time and more clients are responded.
+</li>
+<br />
+<li>
+This solution is simple and straight-forward, so it’s easy to build a system working on such a protocol and maintain the flexibility of the protocol.
+</li>
+</ol>
+</td>
+
+<td bgcolor="silver">
+<ol>
+<li>
+It’s rather possible to receive an incomplete document when the network doesn’t work well due to the lack of reliability.
+</li>
+<br />
+<li>
+With the developments of web, sometimes we need to record the state of communications, but the server doesn’t have the ability.
+</ol>
+</td>
+</tr>
+</table>
+<br />
+
+<p><strong>
+Conclusion: Since the protocol doesn’t keep a record of requests and responses, it’s impossible to count how many browsers are reading its documents.
+</strong></p>
+</div>
+
+<hr />
+
+<div id="Q3">
+<!--this div is about Q3-->
+<a name="Q3"></a>
+<strong>
+Q3: Use some Web search engine to search keywords regarding your interest
+</strong>
+<br /><br />
+
+<p>Here is my attempt:</p>
+<img src="img/baidu.jpg"/>
+
+<!--this link shows the tab frameset-->
+<p><a href="week1_frameset.html" target="_blank" class="two">Try it yourself in Baidu and Bing by clicking here!</a></p>
+</div>
+</div>
+
+<div id="footer">
+<p>Copyright@Alex_Wang | Web Software Technology</p>
+</div>
+
+</body>
+</html>

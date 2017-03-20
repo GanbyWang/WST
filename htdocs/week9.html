@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>week9</title>
+
+<style>
+body{
+	font-family:Verdana, Geneva, sans-serif;
+	margin:0px 0px 0px 0px;
+	background-color:whitesmoke;
+}
+
+a{
+	text-decoration:none;
+}
+
+a.one:link {color:white;}
+a.one:visited {color:white;}
+a.one:hover {color:coral;}
+
+a.two:link {color:lightslategray;}
+a.two:visited {color:lightslategray;}
+a.two:hover {color:coral;}
+
+a.three:link {color:black;}
+a.three:visited {color:black;}
+a.three:hover {color:coral;}
+
+#nav{
+	width:100%;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+}
+
+#nav table{
+	width:100%;
+	text-align:center;
+	background-color:black;
+	color:white;
+	height:50px;
+	border-style:none;
+}
+
+#header{
+	text-align:center;
+	padding:30px;
+	color:lightslategray;
+}
+
+#hw_nav {
+	width:80%;
+	padding:20px 10% 20px 10%;
+	line-height:200%;
+}
+
+#hw_nav p{
+	font-size:20px;
+	line-height:150%;
+	text-align:center;
+}
+
+#hw_nav table{
+	width:100%;
+	text-align:center;
+	background-color:black;
+	color:white;
+	height:50px;
+	border-style:none;
+}
+
+.hw {
+	width:80%;
+	padding:30px 10% 30px 10%;
+	line-height:200%;
+}
+
+.req {
+	font-size:16px;
+	line-height:150%;
+	font-family:'Comic Sans MS', cursive;
+	background-color:silver;
+	padding:20px;
+}
+
+.ans {
+	font-size:16px;
+	line-height:150%;
+	font-family:'Comic Sans MS', cursive;
+	background-color:white;
+	padding:20px;
+}
+
+#vali {
+	font-size:16px;
+	line-height:150%;
+	font-family:'Comic Sans MS', cursive;
+	background-color:silver;
+	padding:20px;
+}
+
+#footer{
+	clear:both;
+	text-align:left;
+	width:100%;
+	background-color:black;
+	color:white;
+	padding:10px 20px 10px 20px;
+}
+</style>
+</head>
+
+<body>
+<div id="nav">
+<table>
+<tr>
+<td width="33%">
+<strong><a href="../index.html" class="one">Homepage</a></strong>
+</td>
+
+<td width="33%" style="background:white; color:black;">
+<strong>Homework List</strong>
+</td>
+
+<td width="33%">
+<strong><a href="index.html#info" class="one">Contact Me</a></strong>
+</td>
+</tr>
+</table>
+</div>
+
+<div id="header">
+<h1>Week 9 homework</h1>
+</div>
+<hr />
+
+<div class="hw">
+<strong>HW1:</strong>
+<p class="req">
+Apply a Web application framework to realize a survey program in MVC. Write a brief introduction of your MVC code (100-500 words).
+</p>
+
+<strong>Answer:</strong>
+<p class="ans">
+I use ThinkPHP to accomplish this homework.
+<br />
+You can turn in the form by <a href="http://162.105.146.180:8079/ThinkPHP/index.php/home/Submit/submit" class="two"><i>clicking here.</i></a>
+<br />
+You can query and delete the result by <a href="http://162.105.146.180:8079/ThinkPHP/index.php/home/Query/query" class="two"><i>clicking here.</i></a>
+
+<br /><br />
+
+<strong>Code Introduction:</strong><br />
+&nbsp;&nbsp;This time, ThinkPHP is used to realize the framework. As other application frameworks, ThinkPHP also follows the MVC model. Base on MVC principle, my code files are divided into three parts as follow:<br />
+1. <strong>View layer:</strong> The view layer of MVC stipulates the appearance of the web application. In this case, 
+<a href="week9_code/query.txt" class="two" target="_blank">
+submit.html
+</a>
+ and 
+<a href="week9_code/query.txt" class="two" target="_blank">
+query.html
+</a>
+ serve as the templates.<br />
+2. <strong>Control layer:</strong> The control layer of MVC describes the logical flow of the web application. In this case, 
+<a href="week9_code/SubmitController.txt" class="two" target="_blank">
+SubmitController.class.php
+</a>
+ and 
+<a href="week9_code/QueryController.txt" class="two" target="_blank">
+QueryController.class.php
+</a>
+ are responsible for displaying the page and interacting with database.<br />
+3. <strong>Model layer:</strong> The model layer is put forward in order to reuse the code. ThinkPHP offers a lot of models, such as the "M" and "D" functions, which are used in handling database. I use some functions available in ThinkPHP instead of realizing them myself.<br /><br />
+<i>You can view the source code by clicking its name.</i>
+</p>
+</div>
+
+<hr />
+
+<div class="hw">
+<strong>HW2:</strong>
+<p class="req">
+Realize the proxy-pass-reverse.
+</p>
+
+<strong>Answer:</strong>
+<p class="ans">
+&nbsp;&nbsp;I accomplish the homework on the base of the existing Apache server. You can check the result by clicking the following links. They act exactly the same as the above pages, but they are through port 8579 instead of 8079.<br /><br />
+You can turn in the form by <a href="http://162.105.146.180:8579/ThinkPHP/index.php/home/Submit/submit" class="two"><i>clicking here.</i></a>
+<br />
+You can query and delete the result by <a href="http://162.105.146.180:8579/ThinkPHP/index.php/home/Query/query" class="two"><i>clicking here.</i></a>
+</p>
+</div>
+
+<hr />
+
+<div class="hw">
+<strong>Optional:</strong>
+<p class="req">
+Realize load-balancing and hot-standby by using port 90xx and 95xx.
+</p>
+
+<strong>Answer:</strong>
+<p class="ans">
+You can check my result by 
+<a href="http://162.105.146.180:8079/balancer-manager" class="two" target="_blank">
+<i>clicking here.</i>
+</a>
+</p>
+</div>
+
+<hr />
+<div id="footer">
+<p>Copyright@Alex_Wang | Web Software Technology</p>
+</div>
+</body>
+</html>

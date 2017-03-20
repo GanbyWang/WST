@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WST_homepage</title>
+
+<style>
+body{
+	font-family:Verdana, Geneva, sans-serif;
+	margin:0px 0px 0px 0px;
+}
+
+a{
+	text-decoration:none;
+}
+
+a.one:link {color:white;}
+a.one:visited {color:white;}
+a.one:hover {color:coral;}
+
+a.two:link {color:black;}
+a.two:visited {color:black;}
+a.two:hover {color:coral;}
+
+#nav{
+	width:100%;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+}
+
+#nav table{
+	width:100%;
+	text-align:center;
+	background-color:black;
+	color:white;
+	height:50px;
+	border-style:none;
+}
+
+#header{
+	text-align:center;
+	padding:30px;
+	color:lightslategray;
+}
+
+#bar {
+	width:55%;
+	float:left;
+}
+
+#bar iframe {
+	padding-left:10%;
+	padding-top:20px;
+	width:80%;
+}
+
+#bar img {
+	width:70%;
+	padding:3%;
+	background-color:gray;
+	margin-left:12%;
+}
+
+#hwlist{
+	width:40%;
+	float:left;
+	left:5%;
+}
+
+#hwlist h3{
+	background:black;
+	margin:0px 0px 0px 0px;
+	height:30px;
+	padding:20px;
+	color:white;
+}
+
+#hwlist ul{
+	margin:0px 0px 0px 0px;
+	width:100%;
+	padding:0px 0px 0px 0px;
+}
+
+#hwlist li{
+	margin:0px 0px 0px 0px;
+	font-family:"Comic Sans MS", cursive;
+	font-size:20px;
+	background:white;
+	color:black;
+	padding:30px 10px 30px 10px;
+	text-align:center;
+	list-style-type:square;
+	list-style-position:inside;
+}
+
+#hwlist p{
+	text-align:center;
+	font-family:Verdana, Geneva, sans-serif;
+	color:lightslategray;
+}
+
+#info {
+	width:90%;
+	position:relative;
+	left:5%;
+	margin-bottom:20px;
+	clear:both;
+}
+
+#profile{
+	float:left;
+	width:35%;
+}
+
+#contact{
+	float:left;
+	width:65%;
+	background-color:silver;
+}
+
+#contact p{
+	padding-left:50px;
+}
+
+#footer{
+	clear:both;
+	text-align:left;
+	width:100%;
+	background-color:black;
+	color:white;
+	padding:10px 20px 10px 20px;
+}
+</style>
+</head>
+
+<body bgcolor="WhiteSmoke">
+<div id="nav">
+<table id="nav">
+<tr>
+<td width="33%">
+<a href="index.html" class="one"><strong>Homepage</strong></a>
+</td>
+
+<td width="33%" style="background:white; color:black;">
+<strong>Homework List</strong>
+</td>
+
+<td width="33%">
+<strong><a href="index.html#info" class="one">Contact Me</a></strong>
+</td>
+</tr>
+</table>
+</div>
+
+<div id="header">
+<h1>
+Welcome to My Page！
+</h1>
+</div>
+<hr />
+
+<div id="block">
+<!--div bar is used to introduce myself-->
+<div id="bar">
+<p style="line-height:200%; padding:20px 20px 0px 20px; font-family:'Comic Sans MS', cursive; font-size:22px; color:lightslategray;">
+This page is created by <strong>Wang Yicheng</strong> for the <i>Web Software Technology</i> course. I am a junior student in the school of Electronic Engineering and Computer Science, Peking University, majoring in Computer Science.
+</p>
+
+<!--this image is linked to my personal website-->
+<a href="http://weibo.com/u/5400763569" target="_blank"><img src="img/p3.jpg"/></a>
+<p style="font-family:'Comic Sans MS', cursive; margin-left:10%;"><i>Click the pic above to visit my personal website!</i></p>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="http://music.163.com/outchain/player?type=2&id=22538947&auto=1&height=66"></iframe>
+</div>
+
+<!--the homework list is used to show homeworks, you can click the links for details-->
+<div id="hwlist">
+<h3 align="center">Homework list</h3>
+	<ul>
+    <li><a href="week1.html" class="two">Week 1 homework</a></li>
+	<li style="background:silver;"><a href="week2.html" class="two">Week 2 homework</a></li>
+    <li><a href="week3.html" class="two">Week 3 homework</a></li>
+    <li style="background:silver;"><a href="/week4/week4.html" class="two">Week 4 homework</a></li>
+    <li><a href="week5.html" class="two">Week 5 homework</a></li>
+    <li style="background:silver;"><a href="week6/week6.html" class="two">Week 6 homework</a></li>
+    <li><a href="week7/week7.html" class="two">Week 7 homework</a></li>
+    <li style="background:silver;"><a href="week8/week8.html" class="two">Week 8 homework</a></li>
+    <li><a href="week9.html" class="two">Week 9 & 10 homework</a></li>
+	</ul>
+    
+<br />
+<p><i>You can click the links for detail.</i></p>
+</div>
+</div>
+
+<!--div info is used to show my contact infomation-->
+<div id="info">
+<hr />
+<a name="info"></a>
+<p style="line-height:200%; background-color:black; padding:10px; margin-bottom:0px; color:white;">
+If you have any questions or suggestions, please contact me as follows:
+</p>
+
+<!--div profile is used to show my Wechat QR code-->
+<div id="profile" align="center">
+<p align="left" style="font-family:'Comic Sans MS', cursive; color:lightslategray">
+Scan the QR code if you want to get in touch with me by Wechat:
+</p>
+<img src="img/QR.jpg" alt="Wechat: Alex-Pakcoi" width="200" height="200"/>
+</div>
+
+<!--this div displays my detailed infomation-->
+<div id="contact" style="line-height:200%">
+<p>
+<strong>Wang Yicheng</strong><br />
+<strong>Student ID: </strong>1400012795<br />
+<strong>Tel: </strong>15010052529<br />
+<strong>Email address: </strong>wang_yicheng@pku.edu.cn<br />
+School of Electronics Engineering and Computer Science,<br />
+Peking University,<br />
+Beijing,100871,China
+</p>
+<br />
+</div>
+</div>
+
+<div id="footer">
+<p>Copyright@Alex_Wang | Web Software Technology</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+@charset "utf-8";
+/* CSS Document */
+
+a{
+	text-decoration:none;
+}
+
+a.one:link {color:white;}
+a.one:visited {color:white;}
+a.one:hover {color:coral;}
+
+#header{
+	width:100%;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+}
+
+#header table{
+	width:100%;
+	text-align:center;
+	background-color:black;
+	color:white;
+	height:50px;
+	border-style:none;
+}
+
+#left_col{
+	width:20%;
+	float:left;
+	height:2000px;
+	background-color:silver;
+	margin-bottom:20px;
+	margin-left:4%;
+	margin-right:1%;
+	text-align:center;
+	font-family:"Comic Sans MS", cursive;
+}
+
+#left_col p{
+	line-height:200%;
+	font-family:"Comic Sans MS", cursive;
+	font-size:24px;
+	padding:20px;
+}
+
+#central{
+	width:50%;
+	float:left;
+	height:2000px;
+	background-color:white;
+	margin-bottom:20px;
+	overflow:scroll;
+}
+
+#central h1{
+	text-align:center;
+	color:lightslategray;
+	margin-top:30px;
+	margin-bottom:30px;
+}
+
+#central p{
+	margin:20px;
+	padding:20px;
+	line-height:150%;
+	font-size:20px;
+}
+
+#central img{
+	margin:20px 10% 20px 10%;
+	width:80%;
+}
+
+#ans{
+	color:lightslategray;
+}
+
+#right_col{
+	width:20%;
+	float:right;
+	height:2000px;
+	background-color:silver;
+	margin-bottom:20px;
+	margin-right:4%;
+	margin-left:1%;
+	text-align:center;
+	font-family:"Comic Sans MS", cursive;
+}
+
+#right_col p{
+	line-height:200%;
+	font-family:"Comic Sans MS", cursive;
+	font-size:24px;
+	padding:20px;
+}
+
+#footer{
+	clear:both;
+	text-align:left;
+	width:100%;
+	background-color:black;
+	color:white;
+	padding:10px 20px 10px 20px;
+}
+
+a.two:link {color:lightslategray;}
+a.two:visited {color:lightslategray;}
+a.two:hover {color:coral;}

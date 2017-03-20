@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>week9_query</title>
+
+<script type="text/javascript" src="http://162.105.146.180:8081/js/jquery.min.js"></script>
+
+<style>
+body{
+	font-family:Verdana, Geneva, sans-serif;
+	margin:0px 0px 0px 0px;
+	background-color:whitesmoke;
+}
+
+a{
+	text-decoration:none;
+}
+
+a.one:link {color:white;}
+a.one:visited {color:white;}
+a.one:hover {color:coral;}
+
+a.two:link {color:lightslategray;}
+a.two:visited {color:lightslategray;}
+a.two:hover {color:coral;}
+
+.button{
+	margin:20px;
+	padding:10px;
+	width:200px;
+	font-family:"Comic Sans MS", cursive;
+	font-size:18px;
+}
+
+.req {
+	font-size:16px;
+	line-height:150%;
+	font-family:'Comic Sans MS', cursive;
+	background-color:silver;
+	padding:20px;
+	width:80%;
+	margin-left:10%;
+}
+
+#nav{
+	width:100%;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+}
+
+#nav table{
+	width:100%;
+	text-align:center;
+	background-color:black;
+	color:white;
+	height:50px;
+	border-style:none;
+}
+
+#header{
+	text-align:center;
+	padding:30px;
+	color:lightslategray;
+}
+
+#footer{
+	clear:both;
+	text-align:left;
+	width:100%;
+	background-color:black;
+	color:white;
+	padding:10px 20px 10px 20px;
+}
+</style>
+</head>
+
+<body>
+<div id="nav">
+<table>
+<tr>
+<td width="33%">
+<strong><a href="http://162.105.146.180:8079/index.html" class="one">Homepage</a></strong>
+</td>
+
+<td width="33%" style="background:white; color:black;">
+<strong>Homework List</strong>
+</td>
+
+<td width="33%">
+<strong><a href="http://162.105.146.180:8079/index.html#info" class="one">Contact Me</a></strong>
+</td>
+</tr>
+</table>
+</div>
+
+<div id="header">
+<h1>Query Result</h1>
+</div>
+<hr />
+
+<div class="req">
+<p>
+&nbsp;&nbsp;Here is all the information collected. If you wanna delete some data, please tick it and click the Delete button.
+</p>
+
+<ol id="list">
+</ol>
+
+<button id="delete" onclick='' class="button">Delete</button>
+
+<p style="text-align:right;">
+<a href="http://162.105.146.180:8079/week9.html" class="two">Back to week 9 page.</a>
+</p>
+</div>
+
+<hr />
+<div id="footer">
+<p>Copyright@Alex_Wang | Web Software Technology</p>
+</div>
+
+<script>
+$(document).ready(function(){
+	$.get(
+	"./show",
+	{},
+	function(data)
+	{
+		var obj=eval(data);
+		for(i=0; i<obj.length; i++)
+		{
+			var item=obj[i];
+			var line="<li class='item' id="+item['guest_id']+">";
+			line+="<input type='checkbox' class='delcheck' />";
+			line+="Guest ID: "+item["guest_id"]+"<br />";
+			line+="Guest Name: "+item["guest_name"]+"<br />";
+			line+="Age: "+item["age"]+"<br />";
+			line+="Gender: "+item["gender"]+"<br />";
+			line+="E_mail: "+item["e_mail"]+"<br />";
+			line+="</li>";
+			$("#list").append(line);
+		}
+	},
+	"json"
+	);
+	
+	$("#delete").click(function(){
+		var dels="";
+		$(".delcheck").each(function(){
+			if($(this).prop("checked"))
+			{
+				dels+=$(this).parents(".item").attr("id")+"&";
+			}
+		});
+		dels=dels.substring(0,dels.length-1);
+		$.post(
+		"./delete",
+		{
+			del:dels
+		},
+		function(data)
+		{
+			document.location.reload();
+		}
+		);
+	});
+});
+</script>
+</body>
+</html>

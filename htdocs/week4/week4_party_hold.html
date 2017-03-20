@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>week4_party_hold</title>
+
+<script type="text/javascript">
+function query(){
+	var check=window.document.getElementById("host_name").value;
+	if(check=="")
+	{
+		window.alert("You haven't filled in the host name!");
+		return false;
+	}
+	check=window.document.getElementById("time").value;
+	if(check=="")
+	{
+		window.alert("You haven't filled in the time!");
+		return false;
+	}
+	check=window.document.getElementById("place").value;
+	if(check=="")
+	{
+		window.alert("You haven't filled in the place!");
+		return false;
+	}
+	window.alert("Now you have filled in all the information required, you can turn in your questionaire by clicking the Submit button");
+	return true;
+}
+</script>
+
+<style>
+body{
+	font-family:Verdana, Geneva, sans-serif;
+	margin:0px 0px 0px 0px;
+	background-color:whitesmoke;
+}
+
+a{
+	text-decoration:none;
+}
+
+a.one:link {color:white;}
+a.one:visited {color:white;}
+a.one:hover {color:coral;}
+
+a.two:link {color:lightslategray;}
+a.two:visited {color:lightslategray;}
+a.two:hover {color:coral;}
+
+.button{
+	margin:20px;
+	padding:10px;
+	width:150px;
+}
+
+#nav{
+	width:100%;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+}
+
+#nav table{
+	width:100%;
+	text-align:center;
+	background-color:black;
+	color:white;
+	height:50px;
+	border-style:none;
+}
+
+#header{
+	text-align:center;
+	padding:30px;
+	color:lightslategray;
+}
+
+#ques{
+	width:80%;
+	margin-left:10%;
+	background-color:silver;
+	font-family:"Comic Sans MS", cursive;
+	font-size:24px;
+}
+
+#ques p{
+	padding:30px 20px 30px 20px;
+	margin:0px;
+}
+
+#ques input{
+	font-size:24px;
+}
+
+#footer{
+	clear:both;
+	text-align:left;
+	width:100%;
+	background-color:black;
+	color:white;
+	padding:10px 20px 10px 20px;
+}
+</style>
+</head>
+
+<body>
+<div id="nav">
+<table>
+<tr>
+<td width="33%">
+<strong><a href="index.html" class="one">Homepage</a></strong>
+</td>
+
+<td width="33%" style="background:white; color:black;">
+<strong>Homework List</strong>
+</td>
+
+<td width="33%">
+<strong><a href="index.html#info" class="one">Contact Me</a></strong>
+</td>
+</tr>
+</table>
+</div>
+
+<div id="header">
+<h1>Hold a Party!</h1>
+</div>
+<hr />
+
+<div id="ques">
+<form action="week4_party_collect.php" method="post">
+<p style="background-color:black; color:white;">
+<strong>Host Name:</strong><br /><br />
+<input type="text" name="host_name" id="host_name" />
+</p>
+
+<p>
+<strong>Time:</strong><br /><br />
+<input type="text" name="time" id="time" />
+</p>
+
+<p style="background-color:black; color:white;">
+<strong>Place:</strong><br /><br />
+<input type="text" name="place" id="place" />
+</p>
+
+<p>
+Make sure that you have filled in every item the questionaire needs. 
+Click <span style="color:coral;" onclick="query()">here</span> to check!
+</p>
+<input class="button" type="submit" value="Submit" />
+</form>
+
+<p style="text-align:right;">
+<a href="week4_form_op.html#hw3" class="two">Back to week 4 form page.</a>
+</p>
+</div>
+
+<hr />
+<div id="footer">
+<p>Copyright@Alex_Wang | Web Software Technology</p>
+</div>
+</body>
+</html>

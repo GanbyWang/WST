@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>week6_popups</title>
+
+<script language="javascript">
+<!--
+function changePage()
+{
+	var url=prompt("Fill in the URL of the page", "http://162.105.146.180:8079/");
+	if(url!="")
+	{
+		window.location=url;
+	}
+}
+-->
+</script>
+
+<style>
+body{
+	font-family:Verdana, Geneva, sans-serif;
+	margin:0px 0px 0px 0px;
+	background-color:whitesmoke;
+}
+
+a{
+	text-decoration:none;
+}
+
+a.one:link {color:white;}
+a.one:visited {color:white;}
+a.one:hover {color:coral;}
+
+a.two:link {color:lightslategray;}
+a.two:visited {color:lightslategray;}
+a.two:hover {color:coral;}
+
+a.three:link {color:black;}
+a.three:visited {color:black;}
+a.three:hover {color:coral;}
+
+#nav{
+	width:100%;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+}
+
+#nav table{
+	width:100%;
+	text-align:center;
+	background-color:black;
+	color:white;
+	height:50px;
+	border-style:none;
+}
+
+#header{
+	text-align:center;
+	padding:30px;
+	color:lightslategray;
+}
+
+#hw_nav {
+	width:80%;
+	padding:20px 10% 20px 10%;
+	line-height:200%;
+}
+
+#hw_nav p{
+	font-size:20px;
+	line-height:150%;
+	text-align:center;
+}
+
+#hw_nav table{
+	width:100%;
+	text-align:center;
+	background-color:black;
+	color:white;
+	height:50px;
+	border-style:none;
+}
+
+.hw {
+	width:80%;
+	padding:30px 10% 30px 10%;
+	line-height:200%;
+}
+
+.ans {
+	font-size:18px;
+	line-height:200%;
+	font-family:'Comic Sans MS', cursive;
+	background-color:white;
+	padding:20px;
+}
+
+#footer{
+	clear:both;
+	text-align:left;
+	width:100%;
+	background-color:black;
+	color:white;
+	padding:10px 20px 10px 20px;
+}
+</style>
+</head>
+
+<body>
+<div id="nav">
+<table>
+<tr>
+<td width="33%">
+<strong><a href="../index.html" class="one">Homepage</a></strong>
+</td>
+
+<td width="33%" style="background:white; color:black;">
+<strong>Homework List</strong>
+</td>
+
+<td width="33%">
+<strong><a href="../index.html#info" class="one">Contact Me</a></strong>
+</td>
+</tr>
+</table>
+</div>
+
+<div id="header">
+<h1>Week 6 HW3: popups</h1>
+</div>
+<hr />
+
+<div class="hw">
+<p class="ans">
+<strong onclick="changePage()">Wanna go to another page? Click here!</strong><br /><br />
+
+<strong>A new version of LEMON and LIME:</strong><br />
+Do you want to go to 
+<a class="two" href="#" onMouseOver="self.status='Off to the Lemon';return true;"
+            onMouseOut="self.status='';" >the Lemon</a>?
+<br />Or would you prefer the  
+<a class="two" href="#" onMouseOver="self.status='Ah.... I see that you prefer the lime'; return true;"
+            onMouseOut="self.status='';">the Lime</a>?
+<br /><br />
+
+<i style="font-size:16px;">
+&nbsp;&nbsp;I've found that Chrome and Edge don't support the displays in the status bar but my dreamweaver can do it. So the display you see may go wrong and I'm sorry about that.
+</i>
+</p>
+</div>
+
+<hr />
+<div id="footer">
+<p>Copyright@Alex_Wang | Web Software Technology</p>
+</div>
+</body>
+</html>

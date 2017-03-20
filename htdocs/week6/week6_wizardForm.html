@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>week5_wizardForm</title>
+
+<script language="javascript">
+<!--
+function noValue(val)
+{
+	if (val.search(/\w/) == -1)
+	{
+		return true;
+	}
+	return false;
+}
+
+function noNum(val)
+{
+	if (val.match(/^\d+$/) && parseInt(val)>5 && parseInt(val)<150)
+	{
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+function checkSubmit()
+{
+	var q=document.quiz;
+	var qc=q.chat;
+	var fname=q.Personal_FirstName;
+	var lname=q.Personal_LastName;
+	var age=q.Personal_Age;
+	var sex=q.Personal_Sex;
+	var id=q.Personal_IDNumber;
+	var ent=q.Watch;
+	var holi=q.holiday;
+	var know=q.knowledge;
+	var result=true;
+	
+	if (noValue(fname.value))
+    {
+		result=false;
+		qc.value="First Name: NULL\n";
+	}
+    else
+	{
+		qc.value="First Name: "+fname.value+"\n";
+	}
+	
+	if (noValue(lname.value))
+	{
+		result=false;
+		qc.value+="Last Name: NULL\n";
+	}
+	else
+	{
+		qc.value+="Last Name: "+lname.value+"\n";
+	}
+	
+	if (noValue(age.value) || noNum(age.value))
+	{
+		result=false;
+		qc.value+="Age: NULL\n";
+	}
+	else
+	{
+		qc.value+="Age: "+age.value+"\n";
+	}
+	
+	for (var i=0; i<sex.length; i++)
+	{
+		if(sex[i].checked)
+		{
+			qc.value+="Gender: "+sex[i].value+"\n";
+			break;
+		}
+	}
+	
+	if(noValue(id.value))
+	{
+		result=false;
+		qc.value+="ID Number: NULL\n";
+	}
+	else
+	{
+		qc.value+="ID Number: "+id.value+"\n";
+	}
+	
+	for (var i=0; i<ent.length; i++)
+	{
+		if(ent[i].checked)
+		{
+			if (ent[i].value=="Dunno")
+			{
+				qc.value+="Entertainment: Don't know!\n";
+			}
+			else
+			{
+				qc.value+="Entertainment: "+ent[i].value+"\n";
+			}
+			break;
+		}
+	}
+	
+	qc.value+="Destination: "+holi.value+"\n";
+	
+	for (var i=0; i<know.length; i++)
+	{
+		if (know[i].checked)
+		{
+			qc.value+="Knowledge of JS: "+know[i].value+"\n";
+			break;
+		}
+	}
+	
+	if(result==false)
+	{
+		alert("You have some items empty. Submission failed!\n");
+	}
+	return result;
+}
+-->
+</script>
+
+<style>
+body{
+	font-family:Verdana, Geneva, sans-serif;
+	margin:0px 0px 0px 0px;
+	background-color:whitesmoke;
+}
+
+a{
+	text-decoration:none;
+}
+
+a.one:link {color:white;}
+a.one:visited {color:white;}
+a.one:hover {color:coral;}
+
+a.two:link {color:lightslategray;}
+a.two:visited {color:lightslategray;}
+a.two:hover {color:coral;}
+
+a.three:link {color:black;}
+a.three:visited {color:black;}
+a.three:hover {color:coral;}
+
+#nav{
+	width:100%;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+}
+
+#nav table{
+	width:100%;
+	text-align:center;
+	background-color:black;
+	color:white;
+	height:50px;
+	border-style:none;
+}
+
+#header{
+	text-align:center;
+	padding:30px;
+	color:lightslategray;
+}
+
+#hw_nav {
+	width:80%;
+	padding:20px 10% 20px 10%;
+	line-height:200%;
+}
+
+#hw_nav p{
+	font-size:20px;
+	line-height:150%;
+	text-align:center;
+}
+
+#hw_nav table{
+	width:100%;
+	text-align:center;
+	background-color:black;
+	color:white;
+	height:50px;
+	border-style:none;
+}
+
+.hw {
+	width:80%;
+	padding:30px 10% 30px 10%;
+	line-height:200%;
+	font-size:18px;
+}
+
+.hw table {
+	width:100%;
+	border-style:none;
+	margin:0px;
+}
+
+.hw th {
+	padding:10px;
+	background-color:black;
+	color:white;
+}
+
+.hw td {
+	padding:10px;
+}
+
+.button {
+	font-size:24px;
+	font-family:"Comic Sans MS", cursive;
+	width:200px;
+}
+
+.ans {
+	font-size:16px;
+	line-height:150%;
+	font-family:'Comic Sans MS', cursive;
+	background-color:white;
+	padding:20px;
+}
+
+#footer{
+	clear:both;
+	text-align:left;
+	width:100%;
+	background-color:black;
+	color:white;
+	padding:10px 20px 10px 20px;
+}
+</style>
+</head>
+
+<body>
+<div id="nav">
+<table>
+<tr>
+<td width="33%">
+<strong><a href="../index.html" class="one">Homepage</a></strong>
+</td>
+
+<td width="33%" style="background:white; color:black;">
+<strong>Homework List</strong>
+</td>
+
+<td width="33%">
+<strong><a href="../index.html#info" class="one">Contact Me</a></strong>
+</td>
+</tr>
+</table>
+</div>
+
+<div id="header">
+<h1>Week 6 HW5: wizardForm</h1>
+</div>
+<hr />
+
+<div class="hw">
+<form action="week6_form.php" onsubmit="return checkSubmit();" method="post" name="quiz">
+<h3>1. Please identify and describe yourself:</h3>
+
+<table border="0">
+<thead>
+<tr>
+<th colspan="2" align="left">Personal Information</th>
+</tr>
+</thead>
+
+<tr style="background-color:gray;">
+<td align="left"><em>First Name</em></td>
+<td><input name="Personal_FirstName" type="text" size="20" /></td>
+</tr>
+
+<tr style="background-color:white;">
+<td align="left" ><em>Last Name</em></td>
+<td><input name="Personal_LastName" type="text" size="20" /></td>
+</tr>
+
+<tr style="background-color:gray;">
+<td align="left"><em>Age</em></td>
+<td><input name="Personal_Age" type="text" size="10" maxlength="5" /></td>
+</tr>
+
+<tr style="background-color:white;">
+<td align="left"><em>Sex</em></td>
+<td>
+<input name="Personal_Sex" type="radio" value="Male" checked />              
+<label class="validate">Male</label>
+<input name="Personal_Sex" type="radio" value="Female" />
+<label class="validate">Female</label>
+</td>
+</tr>
+
+<tr style="background-color:gray;">
+<td align="left"><em>ID Number</em></td>
+<td><input name="Personal_IDNumber" type="text" size="20" maxlength="16" /></td>
+</tr>
+</table>
+<br />
+
+<hr />
+
+<h3>2. What do you do in your leisure time:</h3>
+<input type="radio" name="Watch" value="Dunno" checked /> I don't know?!<br />
+<input type="radio" name="Watch" value="Radio" /> Radio<br />
+<input type="radio" name="Watch" value="TV" /> TV<br />
+<input  type="radio" name="Watch" value="Film" /> Film<br />
+
+<hr />
+
+<h3>3. Where do you wanna go to travel:</h3>
+<select style ="font-size:16px; width:30%;" name="holiday">
+<option value="Greece" selected>Greece</option>
+<option value="Italy">Italy</option>
+<option value="France">France</option>
+<option value="Spain">Spain</option>
+</select>
+<br />
+
+<hr />
+
+<h3>4. Rate your knowledge of JavaScript:</h3>
+<input type="radio" name="knowledge" value="1" checked />1
+<input type="radio" name="knowledge" value="2" />2
+<input type="radio" name="knowledge" value="3" />3
+<input  type="radio" name="knowledge" value="4" onClick="alert('I hope you\'re yearning for some learning : ) ' );" />4
+<input  type="radio" name="knowledge" value="5"  onClick="alert('Time for some SERIOUS learning : )');" />5
+<br />
+
+<hr />
+
+<h3>5.</h3>
+<textarea name="chat" rows="10" cols="50"></textarea>
+<br />
+
+
+<hr />
+<input class="button" type=button value="Don't Push Me" name="push" onclick="alert('HOW RUDE!!!!\nI asked you NOT to push me');" />
+<input class="button" type="submit" value="Submit Form" />
+<input class="button" type="reset" value="Reset Form" onclick="return confirm('Are you sure?');" />
+</form>
+</div>
+
+<hr />
+
+<div class="hw">
+<p class="ans">
+<b>About the Bonus:</b><br />
+I use JS to check if all the items are filled in properly. If the form is legal, a PHP program will be called to show all the infomation it receives.
+</p>
+</div>
+
+<hr />
+<div id="footer">
+<p>Copyright@Alex_Wang | Web Software Technology</p>
+</div>
+</body>
+</html>
